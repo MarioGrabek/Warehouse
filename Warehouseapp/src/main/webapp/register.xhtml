@@ -1,0 +1,50 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+      			xmlns:h="http://xmlns.jcp.org/jsf/html"
+                template="template.xhtml">
+                
+<ui:define name="title">Registration</ui:define>              
+                
+<ui:define name="content">
+	<h:outputText value="Zarejestruj się" />
+
+    <h:form>
+        <p:outputLabel for="name" value="Nick" />
+
+        <p:inputText value="#{registrationController.name}" id="name">
+            <p:ajax event="blur" />
+        </p:inputText>
+        <br />
+        <br />
+        <p:outputLabel for="firstname" value="Imię" />
+
+        <p:inputText value="#{registrationController.firstname}" id="firstname">
+            <p:ajax event="blur" />
+        </p:inputText>
+        <br />
+        <br />
+        
+        <p:outputLabel for="surname" value="Nazwisko" />
+
+        <p:inputText value="#{registrationController.surname}" id="surname">
+            <p:ajax event="blur" />
+        </p:inputText>
+        <br />
+        <br />
+
+
+        <p:outputLabel for="email" value="Adres email" />
+
+        <p:inputText value="#{registrationController.emailAddress}" id="email">
+            <p:ajax event="blur" />
+        </p:inputText>
+
+        <p:commandButton value="Zarejestruj" action="#{registrationController.register}" />
+    </h:form>
+
+
+
+</ui:define>       
+</ui:composition>
+

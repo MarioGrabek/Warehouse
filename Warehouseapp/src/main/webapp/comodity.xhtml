@@ -1,0 +1,49 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+      			xmlns:h="http://xmlns.jcp.org/jsf/html"
+                template="template.xhtml">
+                
+<ui:define name="title">Comodity</ui:define>              
+                
+<ui:define name="content">
+	<h:outputText value="Dodaj zapas magazynowy" />
+	
+	<h:form>
+        <p:outputLabel for="name" value="Nazwa" />
+
+        <p:inputText value="#{comodityController.name}" id="name">
+            <p:ajax event="blur" />
+        </p:inputText>
+        <br />
+        <br />
+        <p:outputLabel for="amount" value="Ilość" />
+
+        <p:inputText value="#{comodityController.amount}" id="amount">
+            <p:ajax event="blur" />
+        </p:inputText>
+        <br />
+        <br />
+        <p:outputLabel for="date" value="Data przyjęcia do magazynu" />
+
+        <p:inputText value="#{comodityController.date}" id="date">
+            <p:ajax event="blur" />
+        </p:inputText>
+        <br />
+        <br />
+        <p:outputLabel for="haz" value="Towar niebiezpieczny" />
+
+        <p:inputText value="#{comodityController.haz}" id="haz">
+            <p:ajax event="blur" />
+        </p:inputText>
+        <br />
+        <br />
+       
+
+        <p:commandButton value="Dodaj zapas magazynowy" action="#{comodityController.save}" />
+    </h:form>
+
+
+
+</ui:define>       
+</ui:composition>

@@ -1,0 +1,25 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                template="template.xhtml">
+
+    <ui:define name="title">Login</ui:define>
+
+
+    <ui:define name="content">
+        <h:form>
+            <h:outputText value="Czesć" />
+            <br />
+            <br />
+            <br />
+            <p:inputText value="#{loginController.name}">
+                <p:ajax event="blur" />
+            </p:inputText>
+            <p:commandButton value="Zaloguj" action="#{loginController.login}" />
+        </h:form>
+    </ui:define>
+
+
+
+</ui:composition>
